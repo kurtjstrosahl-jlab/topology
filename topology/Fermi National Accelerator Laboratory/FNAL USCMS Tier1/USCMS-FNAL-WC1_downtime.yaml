@@ -633,5 +633,40 @@
   Services:
   - SRMv2
 # ---------------------------------------------------------
+- Class: SCHEDULED
+  ID: 955264060
+  Description: Moving the service to new hardware
+  Severity: Outage
+  StartTime: Sep 04, 2021 14:00 +0000
+  EndTime: Sep 13, 2021 15:00 +0000
+  CreatedTime: Sep 01, 2021 20:00 +0000
+  ResourceName: USCMS-FNAL-WC1-CE4
+  Services:
+  - CE
+# ---------------------------------------------------------
+- Class: SCHEDULED
+  ID: 1019882440
+  Description: Kernel reboots
+  Severity: Intermittent Outage
+  StartTime: Nov 17, 2021 14:00 +0000
+  EndTime: Nov 17, 2021 18:00 +0000
+  CreatedTime: Nov 15, 2021 14:57 +0000
+  ResourceName: USCMS-FNAL-WC1-SE2
+  Services:
+  - FTS
+  - SRMv2
+# ---------------------------------------------------------
+- Class: SCHEDULED
+  ID: 1019883145
+  Description: Kernel reboots
+  Severity: Intermittent Outage
+  StartTime: Nov 17, 2021 14:00 +0000
+  EndTime: Nov 17, 2021 18:00 +0000
+  CreatedTime: Nov 15, 2021 14:58 +0000
+  ResourceName: USCMS-FNAL-WC1-SE
+  Services:
+  - FTS
+  - SRMv2
+# ---------------------------------------------------------
 
 

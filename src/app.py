@@ -78,6 +78,11 @@ if not cilogon_pass:
     app.logger.warning("Note, no CILOGON_LDAP_PASSFILE configured; "
                        "OASIS Manager ssh key lookups will be unavailable.")
 
+ligo_pass = readfile(global_data.ligo_ldap_passfile, app.logger)
+if not ligo_pass:
+    app.logger.warning("Note, no LIGO_LDAP_PASSFILE configured; "
+                       "LIGO DNs will be unavailable in authfiles.")
+
 
 def _fix_unicode(text):
     """Convert a partial unicode string to full unicode"""
@@ -124,6 +129,31 @@ def nsfscience_csv():
     response.headers.set("Content-Type", "text/csv")
     response.headers.set("Content-Disposition", "attachment", filename="nsfscience.csv")
     return response
+
+
+@app.route('/organizations')
+def organizations():
+    project_institution = global_data.get_mappings().project_institution
+    if not project_institution:
+        return Response("Error getting Project/Institution mappings", status=503)
+
+    organizations = set()
+    for project in global_data.get_projects()["Projects"]["Project"]:
+        if "Organization" in project:
+            organizations.add(project["Organization"])
+
+    # Invert the Project/Institution mapping. Note that "institution" == "organization"
+    # and "project" is actually the prefix for the project in our standard naming
+    # convention.
+    prefix_by_org = {pi[1]: pi[0] for pi in project_institution.items()}
+
+    org_table = []
+    for org in sorted(organizations):
+        prefix = prefix_by_org.get(org, "")
+        org_table.append((org, prefix))
+
+    return _fix_unicode(render_template('organizations.html.j2', org_table=org_table))
+
 
 
 @app.route('/contacts')
@@ -249,8 +279,7 @@ def _get_cache_authfile(public_only):
             generate_function = stashcache.generate_public_cache_authfile
         else:
             generate_function = stashcache.generate_cache_authfile
-        auth = generate_function(global_data.get_vos_data(),
-                                 global_data.get_topology().get_resource_group_list(),
+        auth = generate_function(global_data,
                                  fqdn=cache_fqdn,
                                  legacy=app.config["STASHCACHE_LEGACY_AUTH"],
                                  suppress_errors=False)
