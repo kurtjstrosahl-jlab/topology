@@ -20,3 +20,135 @@
   Services:
   - CE
 # ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657760
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLAB-dtn2304
+  Services:
+  - Pelican origin
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657761
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLAB-osg-solid
+  Services:
+  - Submit Node
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657762
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLab-FARM-CE
+  Services:
+  - CE
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657763
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLab-FARM-CE-3
+  Services:
+  - CE
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657764
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLab-FARM-CLAS-CE
+  Services:
+  - CE
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657765
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLab-FARM-Squid
+  Services:
+  - Squid
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657766
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: JLab-StashCache-Origin
+  Services:
+  - XRootD origin server
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657767
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: osg-eic
+  Services:
+  - Submit Node
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657768
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: osg-moller
+  Services:
+  - Submit Node
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657769
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: scosg20
+  Services:
+  - Submit Node
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657770
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: scosg2201
+  Services:
+  - Submit Node
+# ---------------------------------------------------------
+- Class: UNSCHEDULED
+  ID: 2508657771
+  Description: cooling issue
+  Severity: Outage
+  StartTime: Aug 04, 2026 17:49 +0000
+  EndTime: Sep 01, 2026 17:49 +0000
+  CreatedTime: Aug 04, 2026 17:49 +0000
+  ResourceName: scosg2202
+  Services:
+  - Submit Node
+# ---------------------------------------------------------
